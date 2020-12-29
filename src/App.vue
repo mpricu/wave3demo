@@ -43,4 +43,8 @@ export default {
     }
   }
 }
+.w-app {
+  font: 14px sans-serif;
+  padding: 24px;
+}
 </style>
