@@ -1,10 +1,26 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view />
+  <w-app>
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </div>
+    <router-view />
+    <w-notification v-model="showThankYou" :timeout="1000" plain round shadow bottom left>
+      Thank you!
+    </w-notification>
+  </w-app>
 </template>
+
+<script>
+export default {
+  setup() {
+    const showThankYou = true;
+    return {
+      showThankYou,
+    };
+  },
+};
+</script>
 
 <style lang="scss">
 #app {
